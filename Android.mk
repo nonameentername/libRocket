@@ -45,7 +45,9 @@ LOCAL_SRC_FILES := \
 	Source/Controls/XMLNodeHandlerTabSet.cpp \
 	Source/Controls/XMLNodeHandlerTextArea.cpp \
 
-include $(BUILD_STATIC_LIBRARY)
+LOCAL_SHARED_LIBRARIES := libRocket
+
+include $(BUILD_SHARED_LIBRARY)
 
 include $(CLEAR_VARS)
 
@@ -193,7 +195,6 @@ LOCAL_SRC_FILES := \
 	Source/Core/EventInstancer.cpp \
 	
 LOCAL_SHARED_LIBRARIES := libft2
-LOCAL_STATIC_LIBRARIES := libRocketControls
 LOCAL_LDLIBS := -ldl -llog
 
 include $(BUILD_SHARED_LIBRARY)
